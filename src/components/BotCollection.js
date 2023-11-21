@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+// Code below deals with the entire Bot Collection data e.g the database containing all the bots and their information 
 function BotCollection(){
 
     const [botData, setBotData] = useState([])

@@ -1,6 +1,6 @@
 
 
-
+// Code below deals with the Bot Army aspect of the project 
 function YourBotArmy({botDataa}){
 
     const [botArmy, setBotArmy] = useState([])

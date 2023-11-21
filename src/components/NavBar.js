@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 
+// Code below shows the Nav bar on the main page and its components
 function NavBar(){
 
 

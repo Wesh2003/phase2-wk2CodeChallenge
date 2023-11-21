@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import YourBotArmy from "./YourBotArmy";
 
-
+// Code below shows the Home and main page of the app
 function Home(){
 
     const [botDataa, setBotDataa] = useState([])

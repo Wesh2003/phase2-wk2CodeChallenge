@@ -3,35 +3,43 @@
 
 <p> 
 
-There are four tasks being conducted in this **Phase 2- WWeek 1 Code Challenge** project which are:
+There are four tasks being conducted in this **Phase 2- WWeek 2 Code Challenge** project which are:
 
 
 <ul>
-    <li> See a table of all transactions. </li>
-    <li> Fill out and submit the form to add a new transaction. This should add the new transaction to the table. The new transaction does not have to be persisted to the backend</li>
-    <li> Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table. </li>
+    <li> See a profile of all Bots listed in Bot Collection. </li>
+    <li>Add an individual bot to my army by clicking on it.</li>
+    <li> Release a bot from my army by clicking on it. </li>
+    <li> Discharge a bot from their service forever </li>
 </ul>
 
 </p>
 
-### See a table of all transactions.
+### See a profile of all Bots listed in Bot Collection.
 <p>
 
-This task is conducted in the **Table.js** file. This tasks requires a person to be able to see all of the transactions on the center of the screen.
+This task is conducted in the **BotCollection.js** file. This tasks requires a person to be able to see all of the bots' profiles and descriptions.
 
 </p>
 
-### Fill out and submit the form to add a new transaction.
+### Add an individual bot to my army by clicking on it.
 <p>
 
-This task is conducted in the **Form.js**file. This task requires that a form be created on which after  various details have been inputted, it will create a new transaction on the screen.
+This task is conducted in the **YourBotArmy.js**file. This task requires that a person be able to add a bot to their army by clicking on the Add To Bot Army Button
 
 </p>
 
-### Filter transactions by typing into the search bar
+### Release a bot from my army by clicking on it.
 <p>
 
-This task is conducted in the **Transac.js** file. This task requires that a person be able to find their transaction by entering its name on the search bar
+This task is conducted in the **YourBotArmy.js** file. This task requires that a person be able to remove a bot from army by clicking on the Remove from Bot Army Button
+
+</p>
+
+### Discharge a bot from their service forever
+<p>
+
+This task is conducted in the **BotCollection.js** file. This task requires that a person be able to remove a bot permanently from the collection by clicking Delete from Collection button.
 
 </p>
 
@@ -86,13 +94,13 @@ You can open and run this repository by doing the following:
 1. Create a personal coding folder
 2. Clone the Repository link below
     ```{shell}
-    git clone git@github.com:Wesh2003/phase2-wk1CodeChallenge.git
+    git clone git@github.com:Wesh2003/phase2-wk2CodeChallenge.git
     ```
 2. Open your computer terminal
 3. Open your new personal coding folder through the terminal
 4. Copy paste the command below onto the terminal: 
     ```{shell}
-    git clone git@github.com:Wesh2003/phase2-wk1CodeChallenge.git
+    git clone git@github.com:Wesh2003/phase2-wk2CodeChallenge.git
     ```
 5. open the created folder
 6. input the command below to open VS Code on the project through the terminal.
