@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 // Code below deals with the entire Bot Collection data e.g the database containing all the bots and their information 
-function BotCollection(){
+function BotCollection({handleAddBotArmy}){
 
     const [botData, setBotData] = useState([])
     useEffect(() => {
@@ -33,7 +33,7 @@ function BotCollection(){
         <li key = {bot.id}>
             <img src = {bot.avatar_url} alt = "Image Unavailable"/>
             <h1>{bot.name}</h1>
-            <p>{bot.health}</p>
+            <h1>{bot.health}</h1>
             <p>{bot.damage}</p>
             <p>{bot.armor}</p>
             <p>{bot.bot_class}</p>

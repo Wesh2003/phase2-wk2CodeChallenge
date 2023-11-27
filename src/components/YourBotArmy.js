@@ -1,5 +1,6 @@
 
 import { useState } from 'react'
+import BotCollection from './BotCollection'
 
 // Code below deals with the Bot Army aspect of the project 
 function YourBotArmy({botDataa}){
@@ -14,8 +15,12 @@ function YourBotArmy({botDataa}){
         </li>
         )
     
-    function handleAddBotArmy(bot){
-        setBotArmy(...botArmy, bot)
+    function handleAddBotArmy(event){
+        const bott = {
+            image: event.target.avatar_url,
+            name: event.target.value.name
+        }
+        setBotArmy(...botArmy, bott)
     }
     
     function handleRemoveBotArmy(bot){
@@ -35,6 +40,8 @@ function YourBotArmy({botDataa}){
             <ul>
                 {botArmy}
             </ul>
+            <h1>Bot Collection</h1>
+            <BotCollection handleAddBotArmy = {handleAddBotArmy}/>
         </div>
     )
 
