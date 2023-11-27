@@ -18,20 +18,28 @@ function BotCollection(){
           .then(r => r.json())
           .then(() => {
             console.log('Deleted from ')
-            onDeleteBot(bots)})
+            onDeleteBot(botData.id)})
       
       }
     
     function onDeleteBot(deletedBot) {
 
-        const updatedBotCollection = bots.filter((item) => item.id !== deletedBot.id)
+        const updatedBotCollection = botData.filter((item) => item.id !== deletedBot.id)
         setBotData(updatedBotCollection)
     }
 
 
     const botProfiles = botData.map( bot => 
         <li key = {bot.id}>
-            {bot.name}
+            <img src = {bot.avatar_url} alt = "Image Unavailable"/>
+            <h1>{bot.name}</h1>
+            <p>{bot.health}</p>
+            <p>{bot.damage}</p>
+            <p>{bot.armor}</p>
+            <p>{bot.bot_class}</p>
+            <p>{bot.catchphrase}</p>
+            <p>{bot.created_at}</p>
+            <p>{bot.updated_at}</p>
             <button onClick = {handleAddBotArmy}>Add to Bot Army</button>
             <button onClick = {handleBotClick}>Delete from Collection</button>
         </li>

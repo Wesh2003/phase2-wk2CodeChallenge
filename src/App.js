@@ -1,17 +1,21 @@
-import { Routes, Route, redirect } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import BotCollection from './components/BotCollection';
+import NavBar from './components/NavBar'
+import React from 'react';
+import Home from './components/Home'
 
 function App() {
   return (
     <>
-    <Home/>
+    <BrowserRouter>
+    <NavBar />
     <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/home' element={<Home/>}></Route>
-      <Route path='/collection' element={<BotCollection/>}></Route>
+      <Route path='/' element={<Home/>} />
+      <Route path='/home' element={<Home/>} />
+      <Route path='/collection' element={<BotCollection/>} />
     </Routes>
-
+    </BrowserRouter>
   </>
   );
 }
