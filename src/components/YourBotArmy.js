@@ -6,25 +6,33 @@ import BotCollection from './BotCollection'
 function YourBotArmy({botDataa}){
 
     const [botArmy, setBotArmy] = useState([])
+    const [name, setName] = useState([])
+    const [image, setImage] = useState([])
 
     const botArmys = botDataa.map( bot => 
         <li key = {bot.id}>
+            <img src = {bot.avatar_url} />
             {bot.name}
-            <button onClick = {handleAddBotArmy}>Add to Bot Army</button>
-            <button onClick = {handleRemoveBotArmy}>Remove from Bot Army</button>
+            {bot.id}
+            <button onClick = {() => handleAddBotArmy(bot.name, bot.avatar_url)}>Add to Bot Army</button>
+            <button onClick = {() => handleRemoveBotArmy(bot.id)}>Remove from Bot Army</button>
         </li>
         )
     
-    function handleAddBotArmy(event){
+    function handleAddBotArmy(botNam, botImag){
+        // meant to add a bot to the 'My Bot Army' section however i haven't been able to make it to work.
+        setImage(botImag);
+        setName(botNam);
         const bott = {
-            image: event.target.avatar_url,
-            name: event.target.value.name
+            avatar_url: image,
+            name: name,
         }
-        setBotArmy(...botArmy, bott)
+        setBotArmy([...botArmy,bott])
     }
     
-    function handleRemoveBotArmy(bot){
-        const newList = botArmys.filter(bots => parseInt(bots.id) !== parseInt(bot.id))
+    function handleRemoveBotArmy(deletingBot){
+        // function below is supposed to upload a list of all Army bots excluding the one that has been deleted. I haven't been able to make it work though.
+        const newList = botArmys.filter(bots => (bots.id) !== (deletingBot))
         setBotArmy(newList)
 
     }
@@ -40,8 +48,11 @@ function YourBotArmy({botDataa}){
             <ul>
                 {botArmy}
             </ul>
+            <br></br>
+            <br></br>
+            <br></br>
             <h1>Bot Collection</h1>
-            <BotCollection handleAddBotArmy = {handleAddBotArmy}/>
+            <BotCollection/>
         </div>
     )
 

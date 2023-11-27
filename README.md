@@ -76,6 +76,7 @@ The technologies used in this project are
 
 <em> Please note that for the code to work you need to have installed the js server and started it on 
  your local computer.</em>
+<em>Also Please not that ny time you run a function such as clicking a button or Nav Link, it will show an error page after doing its work. Please reload in order to restore the page and continue using the site</em>
 
 ### js server installation method.
 1. install js server by copy pasting the code below on the terminal

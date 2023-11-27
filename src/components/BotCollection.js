@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 // Code below deals with the entire Bot Collection data e.g the database containing all the bots and their information 
-function BotCollection({handleAddBotArmy}){
+function BotCollection(){
 
     const [botData, setBotData] = useState([])
     useEffect(() => {
@@ -40,7 +40,6 @@ function BotCollection({handleAddBotArmy}){
             <p>{bot.catchphrase}</p>
             <p>{bot.created_at}</p>
             <p>{bot.updated_at}</p>
-            <button onClick = {handleAddBotArmy}>Add to Bot Army</button>
             <button onClick = {handleBotClick}>Delete from Collection</button>
         </li>
         )
